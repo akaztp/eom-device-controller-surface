@@ -4,6 +4,8 @@ A performance device parameters controller surface app on a browser for Bitwig S
 ## Description
 This is a set of files for configuring [Open Stage Control](https://openstagecontrol.ammd.net/), which then provides a browser app to control device parameters in [Bitwig Studio](https://www.bitwig.com/). This is an alternative to using a dedicated hardware controller panel with buttons or sliders. Best use is for a tablet, like the iPad, that you can put right next to your keyboard.
 
+This app was inspired by the OSC example app included in "[DrivenByMoss](http://www.mossgrabers.de/Software/Bitwig/Bitwig.html)" extension for Bitwig by [Jürgen Moßgraber](http://www.mossgrabers.de/). Kudos for his extension (which is also needed, see on "How to install")!
+
 With a track selected ("Clarinets V" in the example), you can see the devices panel on Bitwig like in the following example:
 
 ![Bitwig Device Panel Example](./bitwig-device-panel.png)
