@@ -4,6 +4,12 @@ First number increases when there is a change in features. Second number increas
 You can check the installed version by going to the app, enabling the editor and inspecting the comments field on the root element.
 
 # CHANGE LOG
+## v1.1: Initial Release
+### Dependencies
+- Open Stage Control v1.10.3
+### Features:
+- Non used buttons, for device and param pages, collapse so used can grow.
+
 ## v1.0: Initial Release
 ### Dependencies
 - DrivenByMoss v11.8.0
