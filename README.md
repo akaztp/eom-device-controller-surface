@@ -14,7 +14,7 @@ With a device selected like that "MIDI CC" on the left, its params page is autom
 
 ![EOM Device Controller Surface Example](./surface.png)
 
-Now you can interact with the sliders!
+Now you can interact with the sliders, namely using touch screen!
 
 The app also allows to:
 - select tracks
@@ -22,6 +22,10 @@ The app also allows to:
 - select devices within the selected track
 - select param pages within the selected device
 - resync with Bitwig
+- Play, Stop buttons
+- beats indicator (recognizes time signature)
+- selector for clips duration
+- metronome on/off button
 
 The app shows:
 - track names and color

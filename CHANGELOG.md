@@ -4,7 +4,10 @@ First number increases when there is a change in features. Second number increas
 You can check the installed version by going to the app, enabling the editor and inspecting the comments field on the root element.
 
 # CHANGE LOG
-## v1.1: Initial Release
+## v1.2: Added transport bar
+- Added bar with transport buttons, beat indicator, clip size selector
+
+## v1.1: Layout improvement
 ### Dependencies
 - Open Stage Control v1.10.3
 ### Features:
