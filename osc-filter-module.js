@@ -8,9 +8,15 @@ module.exports = {
             return undefined;
         }
         if (address === '/beat/str') {
-            if (!args[0].value.endsWith('.1')) {
+            var value = args[0].value;
+            var beat = value.substr(0, value.indexOf(':'));
+            if (lastBeat === beat || !beat.endsWith('.01')) {
                 return undefined;
             }
+            lastBeat = beat;
+        }
+        if (address === '/play') {
+            lastBeat = null;
         }
         var parts = address.split('/');
         if (parts[1] === 'track') {
@@ -21,3 +27,5 @@ module.exports = {
         return data;
     },
 }
+
+var lastBeat = null;
