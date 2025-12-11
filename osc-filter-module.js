@@ -1,6 +1,9 @@
 module.exports = {
-    oscInFilter:function(data){
+    oscInFilter: function (data) {
         var {address, args} = data
+        if (address === '/update') {
+            return undefined;
+        }
         if (address === '/time/str') {
             return undefined;
         }
