@@ -4,6 +4,10 @@ First number increases when there is a change in features. Second number increas
 You can check the installed version by going to the app, enabling the editor and inspecting the comments field on the root element.
 
 # CHANGE LOG
+
+## v1.3: Corrected Beat filtering
+- With latest OSC script from DrivenByMoss, last beat number is zero padded which was not supported.
+
 ## v1.2: Added transport bar
 - Added bar with transport buttons, beat indicator, clip size selector
 
