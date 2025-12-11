@@ -1,13 +1,13 @@
 {
   "createdWith": "Open Stage Control",
-  "version": "1.10.3",
+  "version": "1.15.4",
   "type": "session",
   "content": {
     "type": "root",
     "id": "root",
     "visible": true,
     "interaction": true,
-    "comments": "v1.2",
+    "comments": "v1.1",
     "width": "auto",
     "height": "auto",
     "colorText": "auto",
@@ -36,7 +36,6 @@
     "target": "",
     "ignoreDefaults": false,
     "bypass": false,
-    "script": "",
     "widgets": [
       {
         "type": "variable",
@@ -51,8 +50,10 @@
         "target": "",
         "ignoreDefaults": false,
         "bypass": false,
-        "script": "",
-        "comments": ""
+        "comments": "",
+        "onValue": "",
+        "onCreate": "",
+        "lock": false
       },
       {
         "type": "variable",
@@ -67,8 +68,10 @@
         "target": "",
         "ignoreDefaults": false,
         "bypass": false,
-        "script": "",
-        "comments": ""
+        "comments": "",
+        "onValue": "",
+        "onCreate": "",
+        "lock": false
       },
       {
         "type": "panel",
@@ -111,7 +114,6 @@
         "target": "",
         "ignoreDefaults": false,
         "bypass": false,
-        "script": "",
         "widgets": [
           {
             "type": "panel",
@@ -153,7 +155,6 @@
             "target": "",
             "ignoreDefaults": false,
             "bypass": false,
-            "script": "",
             "widgets": [
               {
                 "type": "button",
@@ -183,7 +184,6 @@
                 "value": "OSC(/click)",
                 "default": 0,
                 "linkId": "",
-                "script": "",
                 "address": "/click",
                 "preArgs": "",
                 "typeTags": "",
@@ -195,7 +195,10 @@
                 "html": "",
                 "vertical": false,
                 "wrap": false,
-                "comments": ""
+                "comments": "",
+                "onValue": "",
+                "onCreate": "",
+                "lock": false
               },
               {
                 "type": "button",
@@ -225,7 +228,6 @@
                 "value": "OSC(/play)",
                 "default": 0,
                 "linkId": "",
-                "script": "if (value===0) send(undefined, '/stop');",
                 "address": "/play",
                 "preArgs": "",
                 "typeTags": "",
@@ -237,7 +239,10 @@
                 "html": "",
                 "vertical": false,
                 "wrap": false,
-                "comments": ""
+                "comments": "",
+                "onValue": "if (value===0) send(undefined, '/stop');",
+                "onCreate": "",
+                "lock": false
               },
               {
                 "type": "button",
@@ -267,7 +272,6 @@
                 "value": "",
                 "default": "",
                 "linkId": "",
-                "script": "var isPlay = get('play');\nif (isPlay === 0) send(undefined, '/time', {type: 'i', value: 0});",
                 "address": "/stop",
                 "preArgs": "",
                 "typeTags": "",
@@ -279,12 +283,18 @@
                 "html": "",
                 "vertical": false,
                 "wrap": false,
-                "comments": ""
+                "comments": "",
+                "onValue": "var isPlay = get('play');\nif (isPlay === 0) send(undefined, '/time', {type: 'i', value: 0});",
+                "onCreate": "",
+                "lock": false
               }
             ],
             "tabs": [],
             "verticalTabs": false,
-            "comments": ""
+            "comments": "",
+            "onValue": "",
+            "onCreate": "",
+            "lock": false
           },
           {
             "type": "matrix",
@@ -326,13 +336,15 @@
             "target": "",
             "ignoreDefaults": false,
             "bypass": false,
-            "script": "",
             "widgets": [],
             "tabs": [],
             "widgetType": "led",
             "quantity": "@{parent.variables.beatsPerMeasure}",
             "props": "{\n  \"colorFill\": \"#{'rgb('+250+','+(250-$*40)+','+0+')'}\",\n  \"value\": \"#{(@{beat}.split('.')[1])>=($+1) ? 1 : 0}\",\n  \"padding\": 10,\n  \"lineWidth\": 0,\n  \"_forceUpdate\": \"#{$ ? undefined : \"@{beat}\"}\"\n}",
-            "comments": ""
+            "comments": "",
+            "onValue": "",
+            "onCreate": "",
+            "lock": false
           },
           {
             "type": "panel",
@@ -374,7 +386,6 @@
             "target": "",
             "ignoreDefaults": false,
             "bypass": false,
-            "script": "",
             "widgets": [
               {
                 "type": "dropdown",
@@ -412,7 +423,9 @@
                 "target": "",
                 "ignoreDefaults": false,
                 "bypass": false,
-                "script": ""
+                "onValue": "",
+                "onCreate": "",
+                "lock": false
               },
               {
                 "type": "button",
@@ -445,7 +458,6 @@
                 "target": "",
                 "ignoreDefaults": false,
                 "bypass": false,
-                "script": "",
                 "label": "^sync-alt",
                 "on": 1,
                 "off": 0,
@@ -454,16 +466,25 @@
                 "colorTextOn": "auto",
                 "vertical": false,
                 "wrap": false,
-                "comments": ""
+                "comments": "",
+                "onValue": "",
+                "onCreate": "",
+                "lock": false
               }
             ],
             "tabs": [],
             "verticalTabs": false,
-            "comments": ""
+            "comments": "",
+            "onValue": "",
+            "onCreate": "",
+            "lock": false
           }
         ],
         "tabs": [],
-        "comments": ""
+        "comments": "",
+        "onValue": "",
+        "onCreate": "",
+        "lock": false
       },
       {
         "type": "panel",
@@ -524,13 +545,15 @@
                 "padding": 5,
                 "colorTextOn": "auto",
                 "default": "",
-                "script": "",
                 "ignoreDefaults": false,
                 "comments": "",
                 "lineWidth": 0,
                 "html": "",
                 "vertical": false,
-                "wrap": false
+                "wrap": false,
+                "onValue": "",
+                "onCreate": "",
+                "lock": false
               },
               {
                 "type": "panel",
@@ -574,9 +597,11 @@
                 "target": "",
                 "ignoreDefaults": false,
                 "bypass": false,
-                "script": "",
                 "widgets": [],
-                "tabs": []
+                "tabs": [],
+                "onValue": "",
+                "onCreate": "",
+                "lock": false
               },
               {
                 "type": "text",
@@ -605,11 +630,13 @@
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
                 "padding": 5,
-                "script": "",
                 "comments": "",
                 "lineWidth": "auto",
                 "html": "",
-                "decimals": 2
+                "decimals": 2,
+                "onValue": "",
+                "onCreate": "",
+                "lock": false
               },
               {
                 "type": "fader",
@@ -655,12 +682,15 @@
                 "alphaFillOn": "auto",
                 "padding": 0,
                 "gradient": [],
-                "script": "\nif (touch !== undefined) {\n // generated automatically\n // from touchAddress\n var address = \"/user/@{parent.variables.n}/touched\"\n send(address, touch)\n}",
                 "ignoreDefaults": false,
                 "comments": "",
                 "lineWidth": "auto",
                 "html": "",
-                "knobSize": "auto"
+                "knobSize": "auto",
+                "onValue": "\nif (touch !== undefined) {\n // generated automatically\n // from touchAddress\n var address = \"/user/@{parent.variables.n}/touched\"\n send(address, touch)\n}",
+                "onCreate": "",
+                "onTouch": "",
+                "lock": false
               },
               {
                 "type": "text",
@@ -689,11 +719,13 @@
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
                 "padding": 5,
-                "script": "",
                 "comments": "",
                 "lineWidth": "auto",
                 "html": "",
-                "decimals": 2
+                "decimals": 2,
+                "onValue": "",
+                "onCreate": "",
+                "lock": false
               }
             ],
             "width": "11.11%",
@@ -733,12 +765,14 @@
             "justify": "start",
             "gridTemplate": "",
             "verticalTabs": false,
-            "script": "",
             "ignoreDefaults": false,
             "comments": "",
             "lineWidth": "auto",
             "html": "",
-            "contain": true
+            "contain": true,
+            "onValue": "",
+            "onCreate": "",
+            "lock": false
           },
           {
             "type": "clone",
@@ -759,7 +793,7 @@
             "interaction": true,
             "expand": false,
             "comments": "",
-            "script": "",
+            "lock": false,
             "address": "auto",
             "variables": "@{parent.variables}"
           },
@@ -782,7 +816,7 @@
             "interaction": true,
             "expand": "false",
             "comments": "",
-            "script": "",
+            "lock": false,
             "address": "auto",
             "variables": "@{parent.variables}"
           },
@@ -805,7 +839,7 @@
             "interaction": true,
             "expand": "false",
             "comments": "",
-            "script": "",
+            "lock": false,
             "address": "auto",
             "variables": "@{parent.variables}"
           },
@@ -828,7 +862,7 @@
             "interaction": true,
             "expand": "false",
             "comments": "",
-            "script": "",
+            "lock": false,
             "address": "auto",
             "variables": "@{parent.variables}"
           },
@@ -851,7 +885,7 @@
             "interaction": true,
             "expand": "false",
             "comments": "",
-            "script": "",
+            "lock": false,
             "address": "auto",
             "variables": "@{parent.variables}"
           },
@@ -874,7 +908,7 @@
             "interaction": true,
             "expand": "false",
             "comments": "",
-            "script": "",
+            "lock": false,
             "address": "auto",
             "variables": "@{parent.variables}"
           },
@@ -897,7 +931,7 @@
             "interaction": true,
             "expand": "false",
             "comments": "",
-            "script": "",
+            "lock": false,
             "address": "auto",
             "variables": "@{parent.variables}"
           },
@@ -946,7 +980,6 @@
                 "target": "",
                 "ignoreDefaults": false,
                 "bypass": false,
-                "script": "",
                 "widgets": [
                   {
                     "type": "panel",
@@ -990,7 +1023,6 @@
                     "target": "",
                     "ignoreDefaults": false,
                     "bypass": false,
-                    "script": "",
                     "widgets": [
                       {
                         "type": "button",
@@ -1032,7 +1064,9 @@
                         "target": "",
                         "ignoreDefaults": false,
                         "bypass": false,
-                        "script": ""
+                        "onValue": "",
+                        "onCreate": "",
+                        "lock": false
                       },
                       {
                         "type": "button",
@@ -1074,10 +1108,15 @@
                         "target": "",
                         "ignoreDefaults": false,
                         "bypass": false,
-                        "script": ""
+                        "onValue": "",
+                        "onCreate": "",
+                        "lock": false
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "onValue": "",
+                    "onCreate": "",
+                    "lock": false
                   },
                   {
                     "type": "panel",
@@ -1121,12 +1160,17 @@
                     "target": "",
                     "ignoreDefaults": false,
                     "bypass": false,
-                    "script": "",
                     "widgets": [],
-                    "tabs": []
+                    "tabs": [],
+                    "onValue": "",
+                    "onCreate": "",
+                    "lock": false
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "onValue": "",
+                "onCreate": "",
+                "lock": false
               },
               {
                 "type": "panel",
@@ -1170,7 +1214,6 @@
                 "target": "",
                 "ignoreDefaults": false,
                 "bypass": false,
-                "script": "",
                 "widgets": [
                   {
                     "type": "text",
@@ -1203,7 +1246,9 @@
                     "preArgs": "",
                     "decimals": 2,
                     "target": "",
-                    "script": ""
+                    "onValue": "",
+                    "onCreate": "",
+                    "lock": false
                   },
                   {
                     "type": "panel",
@@ -1249,7 +1294,6 @@
                     "target": "",
                     "ignoreDefaults": false,
                     "bypass": false,
-                    "script": "",
                     "widgets": [
                       {
                         "type": "button",
@@ -1285,16 +1329,21 @@
                         "padding": 0,
                         "colorTextOn": "auto",
                         "default": "",
-                        "script": "",
                         "ignoreDefaults": false,
                         "comments": "",
                         "lineWidth": 0,
                         "html": "",
                         "vertical": false,
-                        "wrap": true
+                        "wrap": true,
+                        "onValue": "",
+                        "onCreate": "",
+                        "lock": false
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "onValue": "",
+                    "onCreate": "",
+                    "lock": false
                   },
                   {
                     "type": "clone",
@@ -1314,7 +1363,7 @@
                         "n": 2
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1336,7 +1385,7 @@
                         "n": 3
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1358,7 +1407,7 @@
                         "n": 4
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1380,7 +1429,7 @@
                         "n": 5
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1402,7 +1451,7 @@
                         "n": 6
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1424,7 +1473,7 @@
                         "n": 7
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1446,12 +1495,15 @@
                         "n": 8
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "onValue": "",
+                "onCreate": "",
+                "lock": false
               },
               {
                 "type": "panel",
@@ -1495,7 +1547,6 @@
                 "target": "",
                 "ignoreDefaults": false,
                 "bypass": false,
-                "script": "",
                 "widgets": [
                   {
                     "type": "text",
@@ -1528,7 +1579,9 @@
                     "preArgs": "",
                     "decimals": 2,
                     "target": "",
-                    "script": ""
+                    "onValue": "",
+                    "onCreate": "",
+                    "lock": false
                   },
                   {
                     "type": "panel",
@@ -1574,7 +1627,6 @@
                     "target": "",
                     "ignoreDefaults": false,
                     "bypass": false,
-                    "script": "",
                     "widgets": [
                       {
                         "type": "button",
@@ -1610,16 +1662,21 @@
                         "padding": 0,
                         "colorTextOn": "auto",
                         "default": "",
-                        "script": "",
                         "ignoreDefaults": false,
                         "comments": "",
                         "lineWidth": 0,
                         "html": "",
                         "vertical": false,
-                        "wrap": true
+                        "wrap": true,
+                        "onValue": "",
+                        "onCreate": "",
+                        "lock": false
                       }
                     ],
-                    "tabs": []
+                    "tabs": [],
+                    "onValue": "",
+                    "onCreate": "",
+                    "lock": false
                   },
                   {
                     "type": "clone",
@@ -1639,7 +1696,7 @@
                         "n": 2
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1661,7 +1718,7 @@
                         "n": 3
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1683,7 +1740,7 @@
                         "n": 4
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1705,7 +1762,7 @@
                         "n": 5
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1727,7 +1784,7 @@
                         "n": 6
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1749,7 +1806,7 @@
                         "n": 7
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   },
@@ -1771,12 +1828,15 @@
                         "n": 8
                       }
                     },
-                    "script": "",
+                    "lock": false,
                     "address": "auto",
                     "variables": "@{parent.variables}"
                   }
                 ],
-                "tabs": []
+                "tabs": [],
+                "onValue": "",
+                "onCreate": "",
+                "lock": false
               }
             ],
             "top": 0,
@@ -1815,12 +1875,14 @@
             "justify": "space-between",
             "gridTemplate": "",
             "verticalTabs": false,
-            "script": "",
             "ignoreDefaults": false,
             "comments": "",
             "lineWidth": "auto",
             "html": "",
-            "contain": true
+            "contain": true,
+            "onValue": "",
+            "onCreate": "",
+            "lock": false
           }
         ],
         "tabs": [],
@@ -1844,14 +1906,20 @@
         "justify": "space-between",
         "gridTemplate": "",
         "verticalTabs": false,
-        "script": "",
         "ignoreDefaults": false,
         "comments": "",
         "lineWidth": "auto",
         "html": "",
-        "contain": true
+        "contain": true,
+        "onValue": "",
+        "onCreate": "",
+        "lock": false
       }
     ],
-    "tabs": []
+    "tabs": [],
+    "onValue": "",
+    "hideMenu": false,
+    "onCreate": "",
+    "lock": false
   }
 }
