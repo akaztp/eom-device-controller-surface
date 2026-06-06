@@ -420,7 +420,7 @@
                 "label": "%key ^ruler-horizontal",
                 "icon": false,
                 "align": "center",
-                "values": "{\n  \"1\": @{parent.variables.beatsPerMeasure},\n  \"2\": #{@{parent.variables.beatsPerMeasure} * 2},\n  \"3\": #{@{parent.variables.beatsPerMeasure} * 3},\n  \"4\": #{@{parent.variables.beatsPerMeasure} * 4},\n  \"5\": #{@{parent.variables.beatsPerMeasure} * 5},\n  \"6\": #{@{parent.variables.beatsPerMeasure} * 6},\n  \"7\": #{@{parent.variables.beatsPerMeasure} * 7},\n  \"8\": #{@{parent.variables.beatsPerMeasure} * 8}\n}",
+                "values": "{\n  \"Manual\": 0,\n  \"1\": @{parent.variables.beatsPerMeasure},\n  \"2\": #{@{parent.variables.beatsPerMeasure} * 2},\n  \"3\": #{@{parent.variables.beatsPerMeasure} * 3},\n  \"4\": #{@{parent.variables.beatsPerMeasure} * 4},\n  \"5\": #{@{parent.variables.beatsPerMeasure} * 5},\n  \"6\": #{@{parent.variables.beatsPerMeasure} * 6},\n  \"7\": #{@{parent.variables.beatsPerMeasure} * 7},\n  \"8\": #{@{parent.variables.beatsPerMeasure} * 8}\n}",
                 "value": "",
                 "default": "@{parent.variables.beatsPerMeasure}",
                 "linkId": "",
@@ -431,7 +431,7 @@
                 "target": "",
                 "ignoreDefaults": false,
                 "bypass": false,
-                "onValue": "",
+                "onValue": "send('/launcher/postRecordingAction', value ? 'play_recorded': 'off');",
                 "onCreate": "",
                 "lock": false,
                 "borderRadius": "auto"
