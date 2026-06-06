@@ -5,6 +5,10 @@ You can check the installed version by going to the app, enabling the editor and
 
 # CHANGE LOG
 
+## v1.4: Added "Manual" option to "Measure" dropdown
+- Added entry "Manual" to the "measure" dropdown which allows for free running clips.
+- Tweaked colour of the beat indicator
+
 ## v1.3: Corrected Beat filtering
 - With latest OSC script from DrivenByMoss, last beat number is zero padded which was not supported.
 
