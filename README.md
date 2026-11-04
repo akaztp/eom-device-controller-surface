@@ -26,7 +26,7 @@ The app also allows to:
 - select param pages within the selected device or track
 - resync with Bitwig
 - Play, Stop buttons
-- beats indicator (recognizes time signature)
+- beats indicator (recognizes time signature), with a strip showing progress within the current beat
 - selector for clips duration
 - metronome on/off button
 

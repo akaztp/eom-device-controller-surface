@@ -5,6 +5,10 @@ You can check the installed version by going to the app, enabling the editor and
 
 # CHANGE LOG
 
+## v1.6: Beat progress strip
+### Features:
+- The beat indicator shows a thin strip inside the block of the current beat, growing from left to right until the next beat. It takes as long as the time between the latest beats as measured on the device, so it reaches the end as the next block lights up; before the first measurement it uses the DAW tempo ("/tempo/raw"). It is hidden while playback is stopped.
+
 ## v1.5: Added track params
 ### Dependencies
 - DrivenByMoss v26.4.0
