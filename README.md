@@ -1,8 +1,8 @@
 # EOM Device Controller Surface
-A device parameters controller surface app on a browser for Bitwig Studio.
+A device and track parameters controller surface app on a browser for Bitwig Studio.
 
 ## Description
-This is a set of files for configuring [Open Stage Control](https://openstagecontrol.ammd.net/), which then provides a browser app to control device parameters in [Bitwig Studio](https://www.bitwig.com/). This is an alternative to using a dedicated hardware controller panel with buttons or sliders. Best use is for a tablet, like the iPad, that you can put right next to your keyboard.
+This is a set of files for configuring [Open Stage Control](https://openstagecontrol.ammd.net/), which then provides a browser app to control device and track parameters in [Bitwig Studio](https://www.bitwig.com/). This is an alternative to using a dedicated hardware controller panel with buttons or sliders. Best use is for a tablet, like the iPad, that you can put right next to your keyboard.
 
 This app was inspired by the OSC example app included in "[DrivenByMoss](http://www.mossgrabers.de/Software/Bitwig/Bitwig.html)" extension for Bitwig by [Jürgen Moßgraber](http://www.mossgrabers.de/). Kudos for his extension (which is also needed, see on "How to install")!
 
@@ -16,11 +16,14 @@ With a device selected like that "MIDI CC" on the left, its params page is autom
 
 Now you can interact with the sliders, namely using touch screen!
 
+Using the "Devices" / "Track" switch on the right column, the sliders can also control the params of the selected track (Bitwig's track remote controls, available since Bitwig 5). In "Track" mode the devices list is hidden and the param pages list shows the track's param pages.
+
 The app also allows to:
 - select tracks
 - change track banks
+- switch between controlling device params and track params
 - select devices within the selected track
-- select param pages within the selected device
+- select param pages within the selected device or track
 - resync with Bitwig
 - Play, Stop buttons
 - beats indicator (recognizes time signature)

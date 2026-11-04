@@ -5,6 +5,18 @@ You can check the installed version by going to the app, enabling the editor and
 
 # CHANGE LOG
 
+## v1.5: Added track params
+### Dependencies
+- DrivenByMoss v26.4.0
+- Open Stage Control v1.31.1
+- Bitwig Studio 5 or later (for track remote controls)
+### Features:
+- Added a "Devices" / "Track" switch at the top of the right column. In "Track" mode the faders control the params of the selected track (Bitwig's track remote controls) and the devices list is hidden.
+- The "Param Pages" list shows the param pages of the selected device or, in "Track" mode, of the selected track.
+- Buttons on the right column all have the same height, up to a maximum, and are stacked from the top. Buttons for missing devices or param pages are hidden.
+### Fixes:
+- Device faders now send their touch state to "/device/param/{1-8}/touched" instead of "/user/{1-8}/touched" (user params were replaced in Bitwig 5), so automation recording in "Touch" mode knows when a fader is held.
+
 ## v1.4: Added "Manual" option to "Measure" dropdown
 - Added entry "Manual" to the "measure" dropdown which allows for free running clips.
 - Tweaked colour of the beat indicator
