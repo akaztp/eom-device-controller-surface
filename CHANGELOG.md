@@ -5,6 +5,13 @@ You can check the installed version by going to the app, enabling the editor and
 
 # CHANGE LOG
 
+## v1.7: Track and device params side by side
+### Features:
+- The faders show the params of the selected track's current param page followed by the params of the selected device's current param page. Params without a name are skipped and at most 8 are shown.
+- When the track itself is selected in Bitwig's device panel (its track remote controls), its params are shown only once, as track params. DrivenByMoss doesn't report this selection, so it's recognized by the device having the same param pages, or the same params, as the track.
+- The "Devices" / "Track" switch now only selects what the lists below it show: the devices of the selected track and their param pages, or the track's param pages.
+- The track select buttons are now a row of their own above the faders.
+
 ## v1.6: Beat progress strip
 ### Features:
 - The beat indicator shows a thin strip inside the block of the current beat, growing from left to right until the next beat. It takes as long as the time between the latest beats as measured on the device, so it reaches the end as the next block lights up; before the first measurement it uses the DAW tempo ("/tempo/raw"). It is hidden while playback is stopped.

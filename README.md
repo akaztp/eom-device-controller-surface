@@ -16,12 +16,14 @@ With a device selected like that "MIDI CC" on the left, its params page is autom
 
 Now you can interact with the sliders, namely using touch screen!
 
-Using the "Devices" / "Track" switch on the right column, the sliders can also control the params of the selected track (Bitwig's track remote controls, available since Bitwig 5). In "Track" mode the devices list is hidden and the param pages list shows the track's param pages.
+The sliders also control the params of the selected track (Bitwig's track remote controls, available since Bitwig 5): they show the params of the track's current param page first, then the params of the device's current param page. Params without a name are skipped, and up to 8 sliders are shown.
+
+The "Devices" / "Track" switch on the right column selects what the lists below it show: the devices of the selected track and their param pages, or the track's param pages.
 
 The app also allows to:
 - select tracks
 - change track banks
-- switch between controlling device params and track params
+- control the params of the selected track and of the selected device at the same time
 - select devices within the selected track
 - select param pages within the selected device or track
 - resync with Bitwig
