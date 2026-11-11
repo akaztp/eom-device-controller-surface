@@ -18,14 +18,17 @@ Now you can interact with the sliders, namely using touch screen!
 
 The sliders also control the params of the selected track (Bitwig's track remote controls, available since Bitwig 5): they show the params of the track's current param page first, then the params of the device's current param page. Params without a name are skipped, and up to 8 sliders are shown.
 
-The "Devices" / "Track" switch on the right column selects what the lists below it show: the devices of the selected track and their param pages, or the track's param pages.
+The list on the right column starts with "Project" and "Track", followed by the devices of the selected track:
+- "Track" turns the track params on or off. While it's on, the sliders show the track params before the device params, and the "Param Pages" list shows the track's param pages before the device's.
+- "Project" shows only the params of the project's current param page on the sliders (Bitwig's project remote controls), and the "Param Pages" list shows the project's param pages. Tapping a device, or "Track", goes back to the device params.
 
 The app also allows to:
 - select tracks
 - change track banks
 - control the params of the selected track and of the selected device at the same time
+- control the project params
 - select devices within the selected track
-- select param pages within the selected device or track
+- select param pages within the selected device, track or project
 - resync with Bitwig
 - Play, Stop buttons
 - beats indicator (recognizes time signature), with a strip showing progress within the current beat

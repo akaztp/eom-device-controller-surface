@@ -5,6 +5,15 @@ You can check the installed version by going to the app, enabling the editor and
 
 # CHANGE LOG
 
+## v1.8: Project params
+### Features:
+- Removed the "Devices" / "Track" switch. The devices list now starts with "Project" and "Track" entries.
+- "Track" turns the track params on or off (on by default). While it's on, the faders show the track params before the device params, and the "Param Pages" list shows the track's param pages before the device's.
+- "Project" shows only the params of the project's current param page on the faders (Bitwig's project remote controls), and lists the project's param pages. Tapping a device, or "Track", goes back to the device params.
+- When the track itself is selected in Bitwig's device panel and "Track" is off, its params are shown as device params.
+- Added a "Devices" title above the devices list.
+- "Project", "Track" and the devices each have their own colour (blue, green and purple), shared with their param pages.
+
 ## v1.7: Track and device params side by side
 ### Features:
 - The faders show the params of the selected track's current param page followed by the params of the selected device's current param page. Params without a name are skipped and at most 8 are shown.
